@@ -11,11 +11,11 @@
 [![issue resolution](https://isitmaintained.com/badge/resolution/CharlesPikachu/itchatpikachu.svg)](https://github.com/CharlesPikachu/itchatpikachu/issues)
 [![open issues](https://isitmaintained.com/badge/open/CharlesPikachu/itchatpikachu.svg)](https://github.com/CharlesPikachu/itchatpikachu/issues)
 
-Note: Most of the codes in this repo are from https://github.com/littlecodersh/ItChat, we only change the login method by referring to https://github.com/why2lyj/ItChat-UOS.
+**Note: Most of the codes in this repo are from https://github.com/littlecodersh/ItChat, we only change the login method by referring to https://github.com/why2lyj/ItChat-UOS.**
 
-注意：本仓库中的大部分代码来自于ItChat这个开源项目, 我们只是修改了登录方式, 利用统信UOS的网页版微信, 可以让你绕过原版网页微信的登录限制。
+**注意：本仓库中的大部分代码来自于ItChat这个开源项目, 我们只是修改了登录方式, 利用统信UOS的网页版微信, 可以让你绕过原版网页微信的登录限制。**
 
-一些使用网页版微信的小例子, 可以参考我的另外一个repo: https://github.com/CharlesPikachu/pikachuwechat (欢迎star)
+**一些使用网页版微信的小例子, 可以参考我的另外一个repo: https://github.com/CharlesPikachu/pikachuwechat (欢迎star)**
 
 
 # Itchatpikachu

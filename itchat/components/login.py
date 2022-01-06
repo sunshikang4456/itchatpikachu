@@ -109,7 +109,10 @@ def get_QRuuid(self):
     url = '%s/jslogin' % config.BASE_URL
     params = {
         'appid': 'wx782c26e4c19acffb',
-        'fun': 'new', }
+        'fun': 'new', 
+        'redirect_uri': 'https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxnewloginpage',
+        'lang': 'zh_CN'
+    }
     headers = {'User-Agent': self.user_agent}
     r = self.s.get(url, params=params, headers=headers)
     regx = r'window.QRLogin.code = (\d+); window.QRLogin.uuid = "(\S+?)";'
@@ -166,7 +169,13 @@ def process_login_info(core, loginContent):
     """
     regx = r'window.redirect_uri="(\S+)";'
     core.loginInfo['url'] = re.search(regx, loginContent).group(1)
-    headers = {'User-Agent': core.user_agent}
+    # headers = {'User-Agent': core.user_agent}
+    headers = {
+        'User-Agent': core.user_agent,
+        'client-version': config.UOS_PATCH_CLIENT_VERSION,
+        'extspam': config.UOS_PATCH_EXTSPAM,
+        'referer': 'https://wx.qq.com/?&lang=zh_CN&target=t'
+    }
     r = core.s.get(core.loginInfo['url'], headers=headers, allow_redirects=False)
     core.loginInfo['url'] = core.loginInfo['url'][:core.loginInfo['url'].rfind('/')]
     for indexUrl, detailedUrl in (
